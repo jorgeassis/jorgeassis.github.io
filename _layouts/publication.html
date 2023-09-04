@@ -6,12 +6,12 @@ layout: default
 	<div class="container" style="margin-top: 20px">
 
 		<div class="row">
-			<div class="col-12 col-lg-9 offset-lg-1 ">
+			<div class="col-12 col-lg-10 offset-lg-1 ">
 
         <h3>Scientific publications<span style="color: #A22A2A">.</span></h3>
 
         <div class="margin-top-10">
-          <p class="font-family-secondary font-small">Exploring the processes driving the distribution of biodiversity to provide high quality biodiversity impact assessments and identify priority conservation areas, safeguarding biodiversity for future generations.</p>
+          <p class="font-family-secondary text-dark">We understand the mechanisms driving the distribution of biodiversity, project the consequences of anthropogenic impacts, and identify conservation areas to inform conservation and management.</p>
         </div>
 
 			</div>
@@ -20,7 +20,7 @@ layout: default
 </div>
 
 
-<div class="section" style="margin-top: -25px">
+<div class="section" style="margin-top: -35px">
 	<div class="container">
 
 		<div class="row">
@@ -35,7 +35,7 @@ layout: default
 					</div>
 
         {% assign postsMain = site.posts | where: "type", "journal" %}
-        {% assign posts = postsMain | where: "featured", "true" %}
+        {% assign posts = postsMain | where: "featured", "true" | sort: 'post_date' | reverse %}
         {% for post in posts limit: 100 %}
 
         <div class="margin-bottom-40">
