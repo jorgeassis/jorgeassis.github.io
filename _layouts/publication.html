@@ -11,7 +11,7 @@ layout: default
         <h3>Scientific publications<span style="color: #A22A2A">.</span></h3>
 
         <div class="margin-top-10">
-          <p class="font-family-secondary text-dark">We understand the mechanisms driving the distribution of biodiversity, project the consequences of anthropogenic impacts, and identify conservation areas to inform conservation and management.</p>
+          <p class="font-family-secondary text-dark">We explore the mechanisms driving the distribution of biodiversity, project the consequences of anthropogenic impacts, and identify conservation areas to inform conservation and management.</p>
         </div>
 
 			</div>
@@ -29,7 +29,7 @@ layout: default
 					</div>
 
         {% assign postsMain = site.posts | where: "type", "journal" %}
-        {% assign posts = postsMain | where: "featured", "true" | sort: 'post_date' | reverse %}
+        {% assign posts = postsMain | where: "featured", "true" | sort: 'post_date' %}
         {% for post in posts limit: 100 %}
 
         <div class="margin-bottom-40">
