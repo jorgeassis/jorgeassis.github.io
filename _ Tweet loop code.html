@@ -1,0 +1,52 @@
+
+<!-- Latest tweet -->
+  
+  <div class="row" style="visibility: hidden">
+    
+    <div class="col-12 col-lg-10 offset-lg-1">
+      <div style="margin-top: 50px" >
+        <div class="margin-bottom-20 margin-left-30 margin-right-30" style=" display: flex;">
+          <div>
+          <ul class="list-inline-dash font-family-secondary">
+            <i class="fas fa-angle-double-right"></i> <li>Latest tweets</li>
+              </ul>
+              </div>
+              <div class="text-right" style="flex-grow: 1">
+                <ul class="list-inline-dash font-family-secondary font-small">
+                  <i class="fas fa-angle-right"></i> <a class="text-link-3" target="_blank" href="https://twitter.com/jorgemfassis"><li> list all tweets</li></a>
+                    </ul>
+                    </div>
+                    </div>
+                    </div>
+                    </div>
+                    </div>
+                    
+                    <div class="row" style="visibility: hidden">
+                      <div class="col-12 col-lg-10 offset-lg-1">
+                        
+                        <div class="owl-carousel" data-owl-autoplay="true" data-owl-nav="false" data-owl-dots="false" data-owl-items="1">
+                          
+                          {% assign posts = site.posts | where: "type", "tweet" %}
+                        {% for post in posts limit: 5 %}
+                        
+                        <div class="testimonial-box">
+                          <div class="quote">
+                            <a href="{{ post.link }}" target="_blank"><p class="font-family-secondary text-dark">{{ post.title }}</p></a>
+                              </div>
+                              <div class="avatar">
+                                <img src="{{ site.baseurl }}/assets/images/{{ post.authorImage }}" alt="">
+                                  <div>
+                                  <h6 class="font-family-secondary font-small text-dark">{{ post.author }}</h6>
+                                    <span class="font-family-secondary font-extra-small text-dark">{{ post.authorType }}</span>
+                                      </div>
+                                      </div>
+                                      </div>
+                                      
+                                      {% endfor %}
+                                    
+                                    </div>
+                                      
+                                      </div>
+                                      </div>
+                                      
+                                      
