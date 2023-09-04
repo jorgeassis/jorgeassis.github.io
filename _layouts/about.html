@@ -55,7 +55,6 @@ layout: default
 			</div>
 		</div>
 		
-
 		<div class="row" style="margin-top: 40px">
   			<div class="col-12 col-lg-10 offset-lg-1">
   					<div class="margin-bottom-20 margin-left-30 margin-right-30 margin-top-50">
@@ -196,7 +195,6 @@ layout: default
               </div>
         </div>
 
-
         <div class="row">
           <div class="col-12 col-lg-10 offset-lg-1">
               <div class="margin-bottom-10 margin-left-30 margin-right-30">
@@ -323,24 +321,8 @@ layout: default
               </div>
         </div>
 
-  </div>
-</div>
 
-
-
-
-
-
-
-
-
-
-
-
-<div class="section">
-	<div class="container">
-
-    <div class="row">
+		<div class="row" style="margin-top: 60px">
       <div class="col-12 col-lg-10 offset-lg-1">
 
           <div class="margin-left-30 margin-right-30 margin-bottom-20" style="margin-top: 15px;">
@@ -361,9 +343,9 @@ layout: default
       {% assign posts = postsMain | where: "featured", "true" %}
       {% for post in posts limit: 4 %}
 
-			<div class="bg-image col-lg-3 border-radius-05 margin-top-10 margin-left-10 margin-right-10" data-bg-src="{{ site.baseurl }}/assets/images/posts/{{ post.mainImage }}" style="height: 164px; background-position: center"></div>
+			<div class="bg-image col-lg-3 border-radius-05 margin-top-10 margin-left-10 margin-right-10" data-bg-src="{{ site.baseurl }}/assets/images/posts/{{ post.mainImage }}" style="height: 144px; background-position: center"></div>
 
-			<div class="col-lg-8 padding-15 margin-top-5" style="min-height: 165px">
+			<div class="col-lg-8 padding-15 margin-top-5" style="min-height: 145px">
 				<a href="{{site.baseurl}}{{ post.url }}"><h5>{{ post.title }}</h5></a>
 				<p class="font-family-secondary text-dark" style="font-size: 15px;">{{ post.description }}</p>
 			</div>
