@@ -11,7 +11,7 @@ layout: default
         <h3>Biodiversity data<span style="color: #A22A2A">.</span></h3>
 
         <div class="margin-top-10">
-          <p class="font-family-secondary text-dark">We explore the drivers and predict the distribution of biodiversity at the global scale to identify priority conservation areas, safeguarding biodiversity for future generations.</p>
+          <p class="font-family-secondary text-dark">We provide biodiversity data under the FAIR principle to explore and predict the distribution of biodiversity at the global scale.</p>
         </div>
 
 			</div>
@@ -23,13 +23,13 @@ layout: default
 					<div class="margin-bottom-20 margin-left-30 margin-right-30">
 						<div>
 							<ul class="list-inline-dash font-family-secondary">
-								<i class="fas fa-angle-double-right"></i> <li>Featured projects</li>
+								<i class="fas fa-angle-double-right"></i> <li>Featured datasets</li>
 							</ul>
 						</div>
 					</div>
 
-        {% assign postsMain = site.posts | where: "type", "project" %}
-        {% assign posts = postsMain | where: "featured", "true" | sort: 'date' | reverse %}
+        {% assign postsMain = site.posts | where: "type", "journal" %}
+        {% assign posts = postsMain | where: "tags", "Data" | where: "tags", "Biodiversity" %}
         {% for post in posts limit: 100 %}
 
         <div class="margin-bottom-40">
