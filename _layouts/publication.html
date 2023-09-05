@@ -58,7 +58,7 @@ layout: default
     					<div class="margin-left-30 margin-right-30" style="margin-top: 35px;">
     						<div>
     							<ul class="list-inline-dash font-family-secondary">
-    								<i class="fas fa-angle-double-right"></i> <li>Additional publications</li>
+    								<i class="fas fa-angle-double-right"></i> <li>Publication list</li>
     							</ul>
     						</div>
     					</div>
@@ -68,8 +68,10 @@ layout: default
 
         <div class="row col-lg-10 border-radius-05 bg-gray offset-lg-1 margin-top-20 margin-bottom-30" style="padding-top: 10px; padding-bottom: 20px"> 
 
+          <!-- where: "featured", "false" |  --> 
+
           {% assign postsMain = site.posts | where: "type", "journal" %}
-          {% assign posts = postsMain | where: "featured", "false" | sort: 'date' | reverse %}
+          {% assign posts = postsMain | sort: 'date' | reverse %}
           {% for post in posts limit: 100 %}
 
           <div style="padding-top: 20px">
