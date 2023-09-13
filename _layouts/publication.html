@@ -29,7 +29,7 @@ layout: default
 					</div>
 
         {% assign postsMain = site.posts | where: "type", "journal" %}
-        {% assign posts = postsMain | where: "featured", "true" | sort: 'post_date' %}
+		{% assign posts = postsMain | where: "featured", "true" | sort: 'date' | reverse %}
         {% for post in posts limit: 100 %}
 
         <div class="margin-bottom-40">
