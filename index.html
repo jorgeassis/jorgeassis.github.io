@@ -74,105 +74,145 @@ credits: ""
 		</div>
 
 
-<!-- Clients -->
+		<!-- Clients -->
 
-<div class="row">
-	<div class="col-12 col-lg-10 offset-lg-1">
-		<div style="margin-top: 60px" >
+		<div class="row">
+			<div class="col-12 col-lg-10 offset-lg-1">
+				<div style="margin-top: 60px" >
 
-      		<div class="margin-left-30 margin-right-30" style="display: flex">
-      				  <div>
-      						<ul class="list-inline-dash font-family-secondary">
-      							<i class="fas fa-angle-double-right"></i> <li>Main partners and clients</li>
-      						</ul>
-      					</div>
+					<div class="margin-left-30 margin-right-30" style="display: flex">
+							<div>
+									<ul class="list-inline-dash font-family-secondary">
+										<i class="fas fa-angle-double-right"></i> <li>Main partners</li>
+									</ul>
+								</div>
+							</div>
+
 					</div>
+			</div>
+		</div>
 
-  </div>
-  </div>
-</div>
+		<div class="row">
+
+			<div class="col-12 col-lg-10 offset-lg-1">
+
+				<div>
+					<a href="http://ccmar.ualg.pt" target="_blank">
+						<img style="opacity: 0.75; float: left; margin-right: 25px; width: 180px" src="{{ site.baseurl }}/assets/images/institutions/169399438786761559-4.png" alt="">
+					</a>
+
+					<a href="http://www.ualg.pt" target="_blank">
+						<img style="opacity: 0.6; float: left; margin-right: 25px; width: 180px" src="{{ site.baseurl }}/assets/images/institutions/169399438786761559-6.png" alt="">
+					</a>
+
+					<a href="https://www.nord.no/en" target="_blank">
+						<img style="opacity: 0.6; float: left; margin-right: 25px; width: 180px" src="{{ site.baseurl }}/assets/images/institutions/169399438786761559-5.png" alt="">
+					</a>
+
+					<a href="https://www.ugent.be/en" target="_blank">
+						<img style="opacity: 0.6; float: left; margin-right: 25px; width: 180px" src="{{ site.baseurl }}/assets/images/institutions/169399438786761559-2.png" alt="">
+					</a>
+
+					<a href="https://www.uevora.pt/en" target="_blank">
+						<img style="opacity: 0.6; float: left; margin-right: 25px; width: 180px" src="{{ site.baseurl }}/assets/images/institutions/169399438786761559-3.png" alt="">
+					</a>
+
+					<a href="https://www.kaust.edu.sa/en/" target="_blank">
+						<img style="opacity: 0.75; float: left; margin-right: 25px; width: 180px" src="{{ site.baseurl }}/assets/images/institutions/169399438786761559.png" alt="">
+					</a>
+
+					<a href="https://www.naturalist.pt" target="_blank">
+						<img style="opacity: 0.6; float: left; margin-right: 25px; width: 180px" src="{{ site.baseurl }}/assets/images/institutions/169399438786761559-7.png" alt="">
+					</a>
+
+				</div>
+			</div>
+
+		</div>
 
 
-<div class="row">
+		<!-- Featured projects -->
 
-   	<div class="col-12 col-lg-10 offset-lg-1">
+		<div class="row">
+			<div class="col-12 col-lg-10 offset-lg-1">
 
-      <div>
-              <a href="http://ccmar.ualg.pt" target="_blank">
-                <img style="opacity: 0.75; float: left; margin-bottom: 3px; margin-right: 25px; width: 180px" src="{{ site.baseurl }}/assets/images/institutions/169399438786761559-4.png" alt="">
-              </a>
+				<div style="margin-top: 100px" >
+						<div class="margin-bottom-20 margin-left-30 margin-right-30" style=" display: flex;">
+							<div>
+								<ul class="list-inline-dash font-family-secondary">
+									<i class="fas fa-angle-double-right"></i> <li>Featured projects</li>
+								</ul>
+							</div>
+							<div class="text-right" style="flex-grow: 1">
+								<ul class="list-inline-dash font-family-secondary font-small">
+									<i class="fas fa-angle-right"></i> <a class="text-link-3" href="{{ site.baseurl }}/projects/"><li> list all projects</li></a>
+								</ul>
+							</div>
+						</div>
+				</div>
 
-              <a href="http://www.ualg.pt" target="_blank">
-                <img style="opacity: 0.6; float: left; margin-bottom: 3px; margin-right: 25px; width: 180px" src="{{ site.baseurl }}/assets/images/institutions/169399438786761559-6.png" alt="">
-              </a>
+			</div>
+		</div>
 
-              <a href="https://www.nord.no/en" target="_blank">
-                <img style="opacity: 0.6; float: left; margin-bottom: 3px; margin-right: 25px; width: 180px" src="{{ site.baseurl }}/assets/images/institutions/169399438786761559-5.png" alt="">
-              </a>
+		<div class="row col-lg-10 border-radius-05 bg-gray offset-lg-1 margin-bottom-30" style="padding-top: 15px">
 
-              <a href="https://www.ugent.be/en" target="_blank">
-                <img style="opacity: 0.6; float: left; margin-bottom: 3px; margin-right: 25px; width: 180px" src="{{ site.baseurl }}/assets/images/institutions/169399438786761559-2.png" alt="">
-              </a>
+		{% assign postsMain = site.posts | where: "type", "project" %}
+		{% assign posts = postsMain | where: "featured", "true" | sort: 'date' | reverse %}
+		{% for post in posts limit: 2 %}
 
-              <a href="https://www.uevora.pt/en" target="_blank">
-                <img style="opacity: 0.6; float: left; margin-bottom: 3px; margin-right: 25px; width: 180px" src="{{ site.baseurl }}/assets/images/institutions/169399438786761559-3.png" alt="">
-              </a>
+			<div class="bg-image col-lg-3 border-radius-05 margin-top-10 margin-left-10 margin-right-10" data-bg-src="{{ site.baseurl }}/assets/images/posts/{{ post.mainImage }}" style="height: 164px; background-position: center"></div>
 
-              <a href="https://www.kaust.edu.sa/en/" target="_blank">
-                <img style="opacity: 0.75; float: left; margin-bottom: 3px; margin-right: 25px; width: 180px" src="{{ site.baseurl }}/assets/images/institutions/169399438786761559.png" alt="">
-              </a>
+		<div class="col-lg-8 padding-15 margin-top-5">
+				<a href="{{site.baseurl}}{{ post.url }}"><h5>{{ post.title }}</h5></a>
+				<p class="font-family-secondary text-dark" style="font-size: 15px;">{{ post.description }}</p>
+		</div>
 
-              <a href="https://www.naturalist.pt" target="_blank">
-                <img style="opacity: 0.6; float: left; margin-bottom: 3px; margin-right: 25px; width: 180px" src="{{ site.baseurl }}/assets/images/institutions/169399438786761559-7.png" alt="">
-              </a>
+		{% endfor %}
 
-        </div>
-      </div>
+		</div>
 
-</div>
+		<!-- Featured code -->
 
-<!-- Featured code -->
+		<div class="row">
+			<div class="col-12 col-lg-10 offset-lg-1">
 
-<div class="row">
-	<div class="col-12 col-lg-10 offset-lg-1">
+				<div style="margin-top: 100px" >
+						<div class="margin-bottom-20 margin-left-30 margin-right-30" style=" display: flex;">
+							<div>
+								<ul class="list-inline-dash font-family-secondary">
+									<i class="fas fa-angle-double-right"></i> <li>Featured code</li>
+								</ul>
+							</div>
+							<div class="text-right" style="flex-grow: 1">
+								<ul class="list-inline-dash font-family-secondary font-small">
+									<i class="fas fa-angle-right"></i> <a class="text-link-3" href="{{ site.baseurl }}/code/"><li> list all code</li></a>
+								</ul>
+							</div>
+						</div>
+				</div>
 
-		<div style="margin-top: 100px" >
-				<div class="margin-bottom-20 margin-left-30 margin-right-30" style=" display: flex;">
-					<div>
-						<ul class="list-inline-dash font-family-secondary">
-							<i class="fas fa-angle-double-right"></i> <li>Featured code</li>
-						</ul>
-					</div>
-					<div class="text-right" style="flex-grow: 1">
-						<ul class="list-inline-dash font-family-secondary font-small">
-							<i class="fas fa-angle-right"></i> <a class="text-link-3" href="{{ site.baseurl }}/code/"><li> list all code</li></a>
-						</ul>
-					</div>
+			</div>
+		</div>
+
+		<div class="row col-lg-10 border-radius-05 bg-gray offset-lg-1 margin-bottom-30" style="padding-top: 15px">
+
+		{% assign postsMain = site.posts | where: "type", "code" %}
+		{% assign posts = postsMain | where: "featured", "true" | sort: 'date' | reverse %}
+		{% for post in posts limit: 2 %}
+
+			<div class="bg-image col-lg-3 border-radius-05 margin-top-10 margin-left-10 margin-right-10" data-bg-src="{{ site.baseurl }}/assets/images/posts/{{ post.mainImage }}" style="height: 164px; background-position: center"></div>
+
+		<div class="col-lg-8 padding-15 margin-top-5">
+				<a href="{{site.baseurl}}{{ post.url }}"><h5>{{ post.title }}</h5></a>
+				<p class="font-family-secondary text-dark" style="font-size: 15px;">{{ post.description }}</p>
+				<div class="margin-top-10">
+					<p class="font-family-secondary font-small text-dark">Programming language: {% if post.language == "python" %}<i class="fab fa-python"></i>{% endif %}{% if post.language == "r" %}<i class="fab fa-r-project"></i>{% endif %}</p>
 				</div>
 		</div>
 
-	</div>
-</div>
+		{% endfor %}
 
-<div class="row col-lg-10 border-radius-05 bg-gray offset-lg-1 margin-bottom-30" style="padding-top: 15px">
-
-  {% assign postsMain = site.posts | where: "type", "code" %}
-  {% assign posts = postsMain | where: "featured", "true" %}
-  {% for post in posts limit: 4 %}
-
-	<div class="bg-image col-lg-3 border-radius-05 margin-top-10 margin-left-10 margin-right-10" data-bg-src="{{ site.baseurl }}/assets/images/posts/{{ post.mainImage }}" style="height: 164px; background-position: center"></div>
-
-  <div class="col-lg-8 padding-15 margin-top-5">
-		<a href="{{site.baseurl}}{{ post.url }}"><h5>{{ post.title }}</h5></a>
-		<p class="font-family-secondary text-dark" style="font-size: 15px;">{{ post.description }}</p>
-		<div class="margin-top-10">
-			<p class="font-family-secondary font-small text-dark">Programming language: {% if post.language == "python" %}<i class="fab fa-python"></i>{% endif %}{% if post.language == "r" %}<i class="fab fa-r-project"></i>{% endif %}</p>
 		</div>
-  </div>
-
-  {% endfor %}
-
-</div>
 
 </div>
 </div>
