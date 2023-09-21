@@ -37,6 +37,12 @@ layout: default
 
           {% if page.mainImageCredits %}<p class="font-family-secondary font-small">Credits: {{ page.mainImageCredits }}</p>{% endif %}
 
+          {% if page.link and page.type == "project" %}
+          <ul class="list-inline-dash font-family-secondary font-small margin-top-20 text-dark">
+            <i class="fas fa-angle-double-right"></i><a href="{{ page.link }}" target="_blank"> Access publication</a>
+          </ul>
+          {% endif %}
+
           {{ content }}
 
           </div>
