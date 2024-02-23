@@ -1,0 +1,336 @@
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<meta name="google-site-verification" content="bk_G_7OoYI8N9v856DPvFsz4-FtC0ahvjuZJXRyYHnU" />
+
+		<!-- SEO -->
+		<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Reducing spatial autocorrelation in SDM | Your awesome title</title>
+<meta name="generator" content="Jekyll v4.3.3" />
+<meta property="og:title" content="Reducing spatial autocorrelation in SDM" />
+<meta property="og:locale" content="en" />
+<meta name="description" content="A simple implementation in R to reduce the negative effect of spatial autocorrelation in distribution models." />
+<meta property="og:description" content="A simple implementation in R to reduce the negative effect of spatial autocorrelation in distribution models." />
+<link rel="canonical" href="/reducing-autocorrelation-species-distribution-modelling/" />
+<meta property="og:url" content="/reducing-autocorrelation-species-distribution-modelling/" />
+<meta property="og:site_name" content="Your awesome title" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2021-03-23T10:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Reducing spatial autocorrelation in SDM" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2021-03-23T10:00:00+00:00","datePublished":"2021-03-23T10:00:00+00:00","description":"A simple implementation in R to reduce the negative effect of spatial autocorrelation in distribution models.","headline":"Reducing spatial autocorrelation in SDM","mainEntityOfPage":{"@type":"WebPage","@id":"/reducing-autocorrelation-species-distribution-modelling/"},"url":"/reducing-autocorrelation-species-distribution-modelling/"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+		<!-- Favicon -->
+    <link href="/assets/images/bears.png" rel="shortcut icon">
+
+		<!-- CSS -->
+		<link href="/assets/plugins/bootstrap/bootstrap.min.css" rel="stylesheet">
+		<link href="/assets/plugins/magnific-popup/magnific-popup.min.css" rel="stylesheet">
+		<link href="/assets/plugins/owl-carousel/owl.carousel.min.css" rel="stylesheet">
+		<link href="/assets/plugins/owl-carousel/owl.theme.default.min.css" rel="stylesheet">
+		<link href="/assets/plugins/justified-gallery/justified-gallery.min.css" rel="stylesheet">
+		<link href="/assets/plugins/sal/sal.min.css" rel="stylesheet">
+		<link href="/assets/css/main.css" rel="stylesheet">
+
+		<!-- Fonts/Icons -->
+		<link href="/assets/plugins/font-awesome/css/all.css" rel="stylesheet">
+		<link href="/assets/plugins/themify/themify-icons.min.css" rel="stylesheet">
+		<link href="/assets/plugins/simple-line-icons/css/simple-line-icons.css" rel="stylesheet">
+
+
+</head>
+
+
+	<body data-preloader="4">
+		<div class="wrapper">
+
+			<!-- Header // sticky -->
+
+			
+
+			<div class="header">
+
+				<div class="container margin-top-10">
+
+					<div class="logo">
+						<h5><a href="/">biodiversityDS</a><span style="color: #A22A2A">.</span></h5>
+					</div>
+
+					<div class="header-menu-wrapper">
+						<ul class="header-menu">
+							<li class="m-item">
+								<a class="m-link" href="/about/">About</a>
+							</li>
+							<li class="m-item">
+								<a class="m-link" href="/projects/">Projects</a>
+							</li>
+							<li class="m-item">
+								<a class="m-link" href="/publications/">Publications</a>
+							</li>
+							<li class="m-item">
+								<!-- <a class="m-link" href="/data-science-academy/">Data Science Academy</a> -->
+								<a class="m-link" href="#">Data Science Academy</a>
+								<ul class="m-dropdown">
+	
+																		
+									<li class="m-dropdown-item"><a class="m-dropdown-link" href="/our-team/">Our team</a></li>
+																		<li class="m-dropdown-item"><a class="m-dropdown-link" href="/our-team/#opportunities">Opportunities</a></li>
+																		
+									<hr>
+									
+																	<li class="m-dropdown-item"><a class="m-dropdown-link" href="/code/">R and Python code</a></li>
+									<li class="m-dropdown-item"><a class="m-dropdown-link" href="/courses/">BDS courses</a></li>
+									<li class="m-dropdown-item"><a class="m-dropdown-link" href="/biodiversity-data/">Biodiversity data</a></li>
+									<li class="m-dropdown-item"><a class="m-dropdown-link" href="/bio-oracle-climate-layers-ecological-distribution-modelling/">Environmental data</a></li>
+									
+
+
+
+								</ul>
+							</li>
+						</ul>
+
+						<!-- Close Button -->
+						<button class="close-button">
+							<span></span>
+						</button>
+					</div>
+
+					<!-- Menu Toggle on Mobile -->
+					<button class="m-toggle">
+						<span></span>
+					</button>
+
+				</div>
+			</div>
+
+			<!-- end Header -->
+
+
+<div class="section">
+	<div class="container" style="margin-top: 20px">
+		<div class="row">
+			<div class="col-12 col-lg-10 offset-lg-1 ">
+
+        <div class="margin-bottom-10">
+          <p class="font-family-secondary font-small">
+            
+            
+            Open code
+            
+          </p>
+        </div>
+
+        <h3>Reducing spatial autocorrelation in SDM</h3>
+
+        <div class="margin-top-10">
+          <p class="font-family-secondary text-dark">A simple implementation in R to reduce the negative effect of spatial autocorrelation in distribution models.</p>
+        </div>
+
+			</div>
+		</div>
+
+		<div class="row" style="margin-top: 60px">
+			<div class="col-12 col-lg-10 offset-lg-1">
+
+				<div class="margin-bottom-20">
+
+          <div class="bg-image box-shadow border-radius-05 margin-bottom-10" data-bg-src="/assets/images/posts/C1.webp" style="height: 425px; background-position: center">
+          </div>
+
+          <div class="margin-top-20 maintext margin-left-30 margin-right-30">
+
+          
+
+          
+
+          <p>Species distribution models (SDM; for review and definition see, e.g., Peterson et al., 2011) are a dominant paradigm to quantify the relationship between environmental dynamics and several manifestations of species biogeography. These statistical approaches pushed an emerging body of research describing the global distribution of species, addressing niche-based questions, supporting biodiversity conservation and ecosystem-based management, as well as inferring the likely anthropogenic pressures leading to population turnover and extinction.</p>
+
+<p>Spatial autocorrelation (SA) is a common challenge while modelling the distribution and abundance of species. This phenomenon, likely present in most ecological datasets, denotes the situation where the values of variables sampled at nearby locations are not independent due to correlation with values at nearby locations (i.e., the value of a predictor variable at a given site can be partially predicted by the values at neighbouring sites).</p>
+
+<p>Accounting for SA has not received much attention in applied SDM studies, however, when present, it may result in poorly specified models and inappropriate spatial inference and prediction. Recent studies proposed to incorporate SA into the actual models while predicting distributions (coined ‘spatial models’; Dormann, 2007), however, this approach does not allow to transfer models to new independent data (e.g., temporal and spatial transferability).</p>
+
+<p>We propose a straightforward approach to reduce the effect of SA in SDM (see also Boavida et al., 2016 for more details). I use a simple example bellow focused on a brown algae species capable of producing marine forests and a set of environmental predictors known to largely explain its distribution.</p>
+
+<div style="padding: 20px" class="border-radius-05 bg-gray font-family-secondary font-small text-dark">
+
+Get the R code: Reducing spatial autocorrelation<br />
+<a target="_blank" href="https://github.com/jorgeassis/spatialAutocorrelation">https://github.com/jorgeassis/spatialAutocorrelation</a>
+
+</div>
+
+<p><img src="/assets/images/posts/C1_1.png" alt="image" /></p>
+
+<ol>
+  <li>
+    <p>A correlogram is produced to assess the correlation of each variable predictor within a range of geographic distances.</p>
+  </li>
+  <li>
+    <p>For each distance class, a linear model tests the effect of correlation with geographic distance. This finds the minimum non-significant autocorrelated distance.</p>
+  </li>
+  <li>
+    <p>The average of the minimum non-significant distances found per variable is used to prune the occurrence records, by leaving only one record within such distance.</p>
+  </li>
+</ol>
+
+<p><img src="/assets/images/posts/C1_2.png" alt="image" /></p>
+
+
+          </div>
+        </div>
+
+        <div class="margin-bottom-20 margin-left-30 margin-right-30">
+
+              <ul class="list-inline-dash font-family-secondary font-small">
+                <i class="fas fa-angle-double-right"></i> Share
+                
+                
+                 code
+                 on <a href="https://twitter.com/share?url=/reducing-autocorrelation-species-distribution-modelling/&text=Reducing spatial autocorrelation in SDM&via=bears.land&hashtags=">Twitter</a>
+                 or <a href="https://www.facebook.com/sharer.php?s=100&p[url]=/reducing-autocorrelation-species-distribution-modelling/">Facebook</a>
+              </ul>
+
+
+              
+              <div style="margin-top: 100px;">
+              <h3>Main reference</h3>
+              <p>Assis, J., Coelho, N. C., Lamy, T., Valero, M., Alberto, F., & Serrão, E. A. (2016). Deep reefs are climatic refugia for genetic diversity of marine forests. Journal of Biogeography, (43), 833–844.</p>
+              </div>
+              
+
+
+              
+              <ul class="list-inline-dash font-family-secondary font-small margin-top-20 text-dark">
+                <i class="fas fa-angle-double-right"></i><a href="https://doi.org/10.1111/jbi.12677" target="_blank"> Access
+                
+                
+                 source
+                </a>
+              </ul>
+              
+
+          </div>
+
+        </div>
+    </div>
+
+
+		<div class="row">
+			<div class="col-12 col-lg-10 offset-lg-1">
+
+					<div class="margin-left-30 margin-right-30" style="margin-top: 85px;">
+						<div>
+							<ul class="list-inline-dash font-family-secondary">
+                  
+                  
+                  <i class="fas fa-angle-double-right"></i> <li>Featured code</li>
+                  
+							</ul>
+						</div>
+					</div>
+
+        </div>
+    </div>
+
+    <div class="row col-lg-10 border-radius-05 bg-gray offset-lg-1 margin-top-20 margin-bottom-30" style="padding-top: 10px; padding-bottom: 10px">
+
+      
+      
+      
+
+        
+
+        <div style="margin-top: 10px; margin-bottom: 20px">
+
+          <div class="content padding-x-20">
+						<a href="/download-biodiversity-records-iNaturalist/"><h5>Downloading biodiversity records from iNaturalist</h5></a>
+						<p class="font-family-secondary text-dark" style="font-size: 15px;">Automatically download biodiversity records from iNaturalist, the most recognised citizen science initiative.</p>
+					</div>
+
+				</div>
+
+        
+        
+
+        
+
+        <div style="margin-top: 10px; margin-bottom: 20px">
+
+          <div class="content padding-x-20">
+						<a href="/climate-layers-ecological-modelling/"><h5>Marine climate layers for ecological modelling</h5></a>
+						<p class="font-family-secondary text-dark" style="font-size: 15px;">High-resolution marine data layers to model the distribution of species at global scales.</p>
+					</div>
+
+				</div>
+
+        
+        
+
+      </div>
+
+  </div>
+</div>
+
+
+
+	<!-- Google Analytics -->
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-4HVK8ZJMY6"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'G-4HVK8ZJMY6');
+	</script>
+	<!-- End Google Analytics -->
+
+
+	<!-- Footer -->
+	<div class="section bg-dark">
+		<div class="container">
+			<div class="row align-items-center">
+				<div class="col-6 ">
+					<h4>biodiversityDS<span style="color: #A22A2A">.</span></h4>
+					<p class="font-small">Jorge Assis [PhD, Associate Researcher]<br>
+						Centre of Marine Sciences, University of Algarve [Faro, Portugal]<br>
+					© 2023 Biodiversity Data Science, All Rights Reserved</p>
+				</div>
+
+				<div class="col-6 text-right">
+					<ul class="list-inline-sm">
+						<li><a class="button-circle button-circle-sm button-circle-outline-white" target="_blank" href="https://twitter.com/jorgemfassis"><i class="fab fa-twitter"></i></a></li>
+						<li><a class="button-circle button-circle-sm button-circle-outline-white" target="_blank" href="https://jorgemfa.medium.com"><i class="fab fa-medium-m"></i></a></li>
+						<li><a class="button-circle button-circle-sm button-circle-outline-white" target="_blank" href="https://github.com/jorgeassis/"><i class="fab fa-github"></i></a></li>
+						<li><a class="button-circle button-circle-sm button-circle-outline-white" href="mailto: jorgemfa@gmail.com"><i class="fab fas fa-at"></i></a></li>
+					</ul>
+				</div>
+
+			</div><!-- end row -->
+		</div><!-- end container -->
+	</div>
+	<!-- end Footer -->
+
+</div>
+<!-- end wrapper of header -->
+
+<div class="scrolltotop">
+  <a class="button-circle button-circle-md button-circle-dark" href="#">
+    <i class="fa fa-angle-up"></i>
+  </a>
+</div>
+
+<!-- JAVASCRIPTS -->
+<script src="/assets/plugins/jquery.min.js"></script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=IntersectionObserver"></script>
+<script src="/assets/plugins/plugins.js"></script>
+<script src="/assets/js/functions.js"></script>
+</body>
+</html>
+
