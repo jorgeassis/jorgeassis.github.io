@@ -156,27 +156,47 @@
 
           
 
-          <p>Bio-ORACLE is a project aiming to provide geophysical, biotic and environmental data for surface and benthic marine realms. The data is generated for global-scale applications, at a spatial resolution of 5 arcmin (approximately 9.2 km at the equator). The most recent climate scenarios are provided in order to model the ecological implications of future changes.
-<br /><br /></p>
-<h5>The main solution</h5>
+          <p>Understanding the relationship between marine species and their environment is key to biodiversity research and conservation. For years, terrestrial scientists have relied on WorldClim for high-resolution environmental data. Now, marine researchers have their equivalent: Bio-ORACLE.</p>
 
-<p>Linking biodiversity occurrence data to the physical and biotic environment provides a framework to formulate hypotheses about the ecological processes governing spatial and temporal patterns in biodiversity, which can be useful for marine ecosystem management and conservation.</p>
+<p>Originally launched in 2012, Bio-ORACLE provides crucial data on ecologically important ocean variables. Our latest update significantly expands this resource, incorporating:</p>
 
-<p>Bio-ORACLE offers a user-friendly solution to accomplish this task by providing 19 global geophysical, biotic and climate layers at a common spatial resolution (5 arcmin) and a uniform landmask.</p>
+<p>Future Climate Scenarios: The newest IPCC climate models, including Shared Socioeconomic Pathways, for long-term projections.
+Enhanced Data: New variables such as sea ice thickness, dissolved iron, phytoplankton, and light at the seafloor.
+Ocean Depths: Near-bottom data layers to model the rich biodiversity of deeper marine habitats.</p>
+
+<p>The importance of these additions is evident in the vast temperature differences between surface and bottom waters (sometimes exceeding 28°C!). We’ve rigorously tested our new data against quality-controlled sources, ensuring accuracy.</p>
+
+<h5>Easy to Use</h5>
+
+<p>Our accompanying R and Python packages offer easy access, management, and integration of Bio-ORACLE data into your existing research workflows.</p>
 
 <div style="padding: 20px" class="border-radius-05 bg-gray font-family-secondary font-small text-dark">
-Data can be downloaded at <a target="_black" href="https://www.bio-oracle.org">www.bio-oracle.org</a> either as ascii or tiff raster files using the interactive download page or the sdmpredictors package in R.
+Data can be downloaded at <a target="_black" href="https://www.bio-oracle.org">bio-oracle.org</a> using the interactive download page. R and Python packages are available at <a target="_black" href="https://github.com/bio-oracle">github.com/bio-oracle</a>.
 </div>
+
+<h5>Why This Matters</h5>
+
+<p>Bio-ORACLE is an indispensable tool for marine scientists, conservationists, and anyone interested in the ocean’s future.  Use this powerful dataset to:</p>
+
+<p>Map potential shifts in marine biodiversity due to climate change.<br />
+Identify vulnerable ocean habitats and prioritize conservation efforts.<br />
+Forecast how marine life might respond to changing conditions.</p>
 
 <p><br /><br /></p>
 
 <h5>Rationale</h5>
 
-<p>The availability of user-friendly, high-resolution global environmental datasets is crucial for bioclimatic modelling. For terrestrial environments, WorldClim has served this purpose since 2005, but equivalent marine data only became available in 2012, with pioneer initiatives like Bio-ORACLE providing data layers for several ecologically relevant variables. Currently, the available marine data packages have not yet been updated to the most recent Intergovernmental Panel on Climate Change (IPCC) predictions nor to present times, and are mostly restricted to the top surface layer of the oceans, precluding the modelling of a large fraction of the benthic diversity that inhabits deeper habitats. To address this gap, Bio-ORACLE provides data for future climate scenarios, present-day conditions and benthic layers (near sea bottom). The project also provides a package of functions in the R software environment (sdmpredictors) to facilitate listing, extraction and management of data layers and allow easy integration with the available pipelines for bioclimatic modelling.</p>
+<p>Impacts of climate change on marine biodiversity are often projected with species distribution modelling using standardized data layers representing physical, chemical and biological conditions of the global ocean. Yet, the available data layers (1) have not been updated to incorporate data of the Sixth Phase of the Coupled Model Intercomparison Project (CMIP6), which comprise the Shared Socioeconomic Pathway (SSP) scenarios; (2) consider a limited number of Earth System Models (ESMs), and (3) miss important variables expected to influence future biodiversity distributions. These limitations might undermine biodiversity impact assessments, by failing to integrate them within the context of the most up-to-date climate change projections, raising the uncertainty in estimates and misinterpreting the exposure of biodiversity to extreme conditions.</p>
 
-<p>Main types of variable contained: Surface and benthic layers for water temperature, salinity, nutrients, chlorophyll, sea ice, current velocity, phytoplankton, primary productivity, iron and light at bottom.</p>
+<h5>Facts</h5>
 
-<p>Spatial location and grain: Global at 5 arcmin (c. 0.08° or 9.2 km at the equator). Time period and grain: Present (2000–2014) and future (2040–2050 and 2090–2100) environmental conditions based on monthly averages. Major taxa and level of measurement: Marine biodiversity associated with sea surface and epibenthic habitats.</p>
+<p>Spatial Location and Grain: Global at 0.05° resolution.br&gt;</p>
+
+<p>Time Period and Grain: Decadal from present-day to the end of the 21st century (2000–2100).br&gt;</p>
+
+<p>Major Taxa and Level of Measurement: Marine biodiversity associated with surface and epibenthic habitats.br&gt;</p>
+
+<p>Software Format: A package of functions developed for Python and R software.br&gt;</p>
 
 
           </div>
