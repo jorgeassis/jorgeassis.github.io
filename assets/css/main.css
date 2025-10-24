@@ -8,20 +8,32 @@
 -------------------------------------------------*/
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800");
 @import url("https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900");
+
 html, body {
   width: 100%;
   height: 100%;
 }
 
 body {
+  background-color: #f6f7fb; /* Add this line */
   overflow-x: hidden;
 }
 
+.my-purple-box {
+  padding: 2rem;
+  text-align: center;
+  box-shadow: 0 10px 40px -4px rgba(24, 27, 30, 0.14);
+}
+
+.post-content p {
+  margin-bottom: 25px;
+}
+
 .maintext p {
-  line-height: 34px;
+  line-height: 40px;
   margin-bottom: 30px;
   font-family: "Poppins", sans-serif;
-  font-size: 15px;
+  font-size: 17px;
 }
 
 .maintext img {
@@ -35,6 +47,74 @@ body {
   box-shadow: 0 10px 40px -4px rgba(24, 27, 30, 0.14);
 }
 
+.category-text {
+    color: #A22A2A;
+    font-size: 14px;
+
+}
+
+.hr-dark {
+  border: 0;
+  border-top: 1px solid #cccdceff; /* Changed from 'dashed' to 'solid' */
+  margin: 1rem 0;
+}
+
+.hr-dashed {
+  border: 0; /* Removes the default solid border */
+  border-top: 1px dashed #ccc; /* Adds a 1px dashed line on top */
+  margin: 1rem 0; /* Adds some space above and below */
+}
+
+a.button.button-pink {
+    background-color: #ec4379ff;
+    color: #fff !important; /* !important ensures text is white */
+    border-color: #ec4379ff;
+}
+
+a.button.button-pink:hover {
+    background-color: #ca2559ff; /* A slightly darker shade for hover */
+    color: #fff !important;
+    border-color: #ca2559ff;
+}
+
+a.button.button-pinkligth {
+    background-color: #F6B1BB;
+    color: #000 !important; /* !important ensures text is white */
+    border-color: #F6B1BB;
+}
+
+a.button.button-pinkligth:hover {
+    background-color: #ee84a6ff; /* A slightly darker shade for hover */
+    color: #000 !important;
+    border-color: #ee84a6ff;
+}
+
+
+a.button.button-purple {
+    background-color: #7e4abeff;
+    color: #fff !important; /* !important ensures text is white */
+    border-color: #7e4abeff;
+}
+
+a.button.button-purple:hover {
+    background-color: #935cd6ff; /* A slightly darker shade for hover */
+    color: #fff !important;
+    border-color: #935cd6ff;
+}
+
+
+a.button.button-yellow {
+    background-color: #efbd23;
+    color: #000000ff !important; /* !important ensures text is white */
+    border-color: #efbd23;
+}
+
+a.button.button-yellow:hover {
+    background-color: #f1d16eff; /* A slightly darker shade for hover */
+    color: #000000ff !important;
+    border-color: #f1d16eff;
+}
+
 .wrapper {
   position: relative;
   z-index: 1;
@@ -42,7 +122,26 @@ body {
   min-height: 100%;
 }
 
+.long-text {
+  display: inline;
+}
+.short-text {
+  display: none;
+}
+
+@media (max-width: 1200px) {
+  
+  .long-text {
+    display: none; /* Hide the short text */
+  }
+  .short-text {
+    display: inline; /* Show the long text */
+  }
+
+}
+
 @media (max-width: 991.98px) {
+  
   .wrapper:after {
     content: '';
     position: absolute;
@@ -83,6 +182,7 @@ body {
 }
 
 @media (min-width: 768px) {
+
   .col-spacing-70 .row:not([class^="col-spacing-"]):not([class*=" col-spacing-"]),
   .col-spacing-60 .row:not([class^="col-spacing-"]):not([class*=" col-spacing-"]),
   .col-spacing-50 .row:not([class^="col-spacing-"]):not([class*=" col-spacing-"]),
@@ -373,11 +473,13 @@ div[class^='bg-dark'] .pagination .page-item.active .page-link, div[class*=' bg-
 }
 
 hr {
-  border-color: rgba(20, 22, 24, 0.1);
+  border: 0;
+  height: 1px;
+  background-image: linear-gradient(to right, transparent, rgba(20, 22, 24, 0.2) 20%, rgba(20, 22, 24, 0.2) 80%, transparent);
 }
 
 div[class^='bg-dark'] hr, div[class*=' bg-dark'] hr, .bg-black hr {
-  border-color: rgba(255, 255, 255, 0.1);
+  background-image: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.2) 20%, rgba(255, 255, 255, 0.2) 80%, transparent);
 }
 
 [data-sal] {
@@ -569,6 +671,30 @@ select {
   box-shadow: none;
 }
 
+.form-textarea {
+  border: 2px solid #7e4abeff;
+  border-radius: 5px;
+  /* Match the button-sm padding and add space for the arrow */
+  padding: 10px 35px 10px 22px;
+  vertical-align: middle; /* Align it nicely with the button */
+}
+
+.form-input {
+  border: 2px solid #7e4abeff;
+  border-radius: 5px;
+  /* Match the button-sm padding and add space for the arrow */
+  padding: 10px 35px 10px 22px;
+  vertical-align: middle; /* Align it nicely with the button */
+}
+
+.custom-select.custom-select-rounded {
+  border: 2px solid #7e4abeff;
+  border-radius: 5px;
+  /* Match the button-sm padding and add space for the arrow */
+  padding: 10px 35px 10px 22px;
+  vertical-align: middle; /* Align it nicely with the button */
+}
+
 form.style-3 input, form.style-3 textarea, form.style-3 .custom-select, form.style-3 .form-control, .style-3 input, .style-3 textarea, .style-3 .custom-select, .style-3 .form-control,
 form.style-4 input,
 form.style-4 textarea,
@@ -680,6 +806,7 @@ img {
 
 img[class^='avatar-'] {
   border-radius: 50%;
+  object-fit: cover;
 }
 
 img.avatar-xs {
@@ -698,6 +825,13 @@ img.avatar-md {
   min-width: 100px;
   width: 100px;
   height: 100px;
+}
+
+img.round {
+  border-radius: 50%;
+    width:250px;
+  height: 250px;
+  border: #ec4379ff 4px solid;
 }
 
 img.avatar-lg {
@@ -722,6 +856,13 @@ img.avatar-3xl {
   min-width: 180px;
   width: 180px;
   height: 180px;
+}
+
+img.avatar-4xl {
+  min-width: 220px;
+  width: 220px;
+  height: 220px;
+    object-fit: cover;
 }
 
 .fancy-image {
@@ -911,7 +1052,7 @@ body {
 h1, h2, h3, h4, h5, h6 {
   margin-bottom: 10px;
   letter-spacing: -0.3px;
-  color: #141618;
+  color: #1a2635ff;
   font-family: "Poppins", sans-serif;
   font-weight: 600;
 }
@@ -960,6 +1101,14 @@ h6 {
 
 .display-4 {
   font-size: 3.5em;
+}
+
+.display-5 {
+  font-size: 3.5em;
+}
+
+.display-6 {
+  font-size: 2.5em;
 }
 
 @media (max-width: 767.98px) {
@@ -1480,7 +1629,7 @@ div[class^='bg-dark'] .accordion.style-3 li.active .accordion-title h1, div[clas
 }
 
 a {
-  color: #767A7D;
+  color: #1a2635ff;
   -webkit-transition: linear 0.1s;
   transition: linear 0.1s;
 }
@@ -2769,7 +2918,7 @@ div[class^='bg-dark'] a[class^='button-ct']:hover .button-ct-text, div[class*=' 
 }
 
 .font-family-primary .button, .font-family-primary.button {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 .button-border-2, a.button-border-2 {
@@ -3929,7 +4078,7 @@ div[class^='bg-dark'] .progress-box .progress .progress-bar, div[class*=' bg-dar
 }
 
 .owl-carousel[data-owl-nav="true"]:not(.owl-nav-left):not(.owl-nav-right):not(.owl-nav-overlay):not(.owl-nav-overlay-left):not(.owl-nav-overlay-right):not(.owl-nav-overlap):not(.owl-nav-overlap-left):not(.owl-nav-overlap-right) {
-  padding: 0 44px;
+  padding: 0 0px;
 }
 
 @media (max-width: 991.98px) {
@@ -5193,11 +5342,12 @@ div[class^='bg-dark'] .blog-category-list li a span, div[class*=' bg-dark'] .blo
 }
 
 .header.dark:not(.absolute-dark) .fm-toggle span, .header.black:not(.absolute-dark) .fm-toggle span, .header.absolute-light:not(.absolute-dark) .fm-toggle span {
-  background: #fff;
+  background-color: #f6f7fb; /* Add this line */
+
 }
 
 .header.dark:not(.absolute-dark) .fm-toggle span:before, .header.dark:not(.absolute-dark) .fm-toggle span:after, .header.black:not(.absolute-dark) .fm-toggle span:before, .header.black:not(.absolute-dark) .fm-toggle span:after, .header.absolute-light:not(.absolute-dark) .fm-toggle span:before, .header.absolute-light:not(.absolute-dark) .fm-toggle span:after {
-  background: #fff;
+  background-color: #f6f7fb; /* Add this line */
 }
 
 .fm-wrapper {
@@ -5469,15 +5619,24 @@ div[class^='bg-white'].fm-wrapper .fm-close span:before, div[class^='bg-white'].
   background: #141618;
 }
 
+.header .header-menu-wrapper .header-menu .m-dropdown-link {
+    color: #141618;
+}
+
 .header {
   top: 0;
   z-index: 990;
   overflow: visible;
-  background: #fff;
   width: 100%;
   height: 80px;
   -webkit-transition: ease-in-out 0.2s;
   transition: ease-in-out 0.2s;
+  background-color: #f6f7fb; /* Add this line */
+
+}
+
+.header .header-menu-wrapper .header-menu .m-item .m-link {
+    color: #141618;
 }
 
 .header.hide {
@@ -5519,11 +5678,11 @@ div[class^='bg-white'].fm-wrapper .fm-close span:before, div[class^='bg-white'].
 }
 
 .header .logo a {
-  color: #141618;
+  color: #1a2635ff;
 }
 
 .header .logo a:hover {
-  color: #141618;
+  color: #1a2635ff;
 }
 
 .header .m-toggle {
@@ -5577,7 +5736,7 @@ div[class^='bg-white'].fm-wrapper .fm-close span:before, div[class^='bg-white'].
 
 .header-menu-wrapper {
   display: inline-block;
-  font-size: 14px;
+  font-size: 16px;
 }
 
 .header-menu-wrapper .header-menu {
@@ -7316,11 +7475,11 @@ body.loaded:after {
 }
 
 .section-lg {
-  padding: 140px 0;
+  padding: 120px 0;
 }
 
 .section-lg.bg-image .container, .section-lg.bg-image .container-fluid {
-  padding: 140px 30px;
+  padding: 120px 30px;
 }
 
 .section-xl {
@@ -8866,6 +9025,36 @@ body.loaded:after {
   background: #ffae42;
 }
 
+.bg-yellow {
+  background-color: #efbd23 !important;
+}
+
+.bg-pink {
+  background-color: #F6B1BB !important;
+}
+
+.bg-purple {
+  background-color: #7e4abeff !important;
+}
+
+.bg-light-purple {
+  background-color: #E0E0F3 !important;
+}
+
+.bg-navyblue {
+  background-color: #0F4C7F !important;
+}
+
+/* This rule finds and disables any hidden overlays on the element */
+.bg-yellow::before,
+.bg-yellow::after {
+  display: none !important;
+}
+
+.bg-pink {
+    background-color: #A22A2A;
+}
+
 .bg-transparent {
   background: transparent;
 }
@@ -8980,6 +9169,14 @@ body.loaded:after {
 
 .margin-top-70 {
   margin-top: 70px;
+}
+
+.margin-top-80 {
+  margin-top: 80px;
+}
+
+.margin-top-100 {
+  margin-top: 100px;
 }
 
 .margin-right-5 {
@@ -9776,11 +9973,11 @@ div[class^='bg-dark'] .border, div[class^='bg-dark'] .border-top, div[class^='bg
 }
 
 .font-family-primary {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 .font-family-secondary {
-  font-family: "Poppins", sans-serif;
+  font-family: "Open Sans", sans-serif;
 }
 
 .font-weight-thin {
@@ -9869,6 +10066,10 @@ div[class^='bg-dark'] .border, div[class^='bg-dark'] .border-top, div[class^='bg
 
 .line-height-200 {
   line-height: 2.0;
+}
+
+.text-white {
+    color: #fff !important;
 }
 
 *.text-white-09 {
@@ -9994,4 +10195,46 @@ div[class^='bg-dark'] .stroke-text, div[class*=' bg-dark'] .stroke-text, .bg-bla
 div[class^='bg-dark'] div[class^='bg-white'] .stroke-text, div[class^='bg-dark'] div[class*=' bg-white'] .stroke-text, div[class^='bg-dark'] .bg-light-gray .stroke-text, div[class^='bg-dark'] .bg-gray .stroke-text, div[class*=' bg-dark'] div[class^='bg-white'] .stroke-text, div[class*=' bg-dark'] div[class*=' bg-white'] .stroke-text, div[class*=' bg-dark'] .bg-light-gray .stroke-text, div[class*=' bg-dark'] .bg-gray .stroke-text, .bg-black div[class^='bg-white'] .stroke-text, .bg-black div[class*=' bg-white'] .stroke-text, .bg-black .bg-light-gray .stroke-text, .bg-black .bg-gray .stroke-text, .bg-green div[class^='bg-white'] .stroke-text, .bg-green div[class*=' bg-white'] .stroke-text, .bg-green .bg-light-gray .stroke-text, .bg-green .bg-gray .stroke-text, .bg-red div[class^='bg-white'] .stroke-text, .bg-red div[class*=' bg-white'] .stroke-text, .bg-red .bg-light-gray .stroke-text, .bg-red .bg-gray .stroke-text, .bg-yellow-orange div[class^='bg-white'] .stroke-text, .bg-yellow-orange div[class*=' bg-white'] .stroke-text, .bg-yellow-orange .bg-light-gray .stroke-text, .bg-yellow-orange .bg-gray .stroke-text {
   color: #141618;
   -webkit-text-stroke-color: #141618;
+}
+
+/* Custom styles for full-screen, centered mobile menu (Final Version) */
+@media (max-width: 991.98px) {
+    .header-menu-wrapper {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+        background-color: #f6f7fb; /* Add this line */
+
+    }
+
+    .header-menu-wrapper .header-menu {
+        text-align: center;
+        max-height: none;
+    }
+
+    .header-menu-wrapper .header-menu .m-item .m-dropdown {
+        background: transparent;
+        padding: 0;
+        margin-top: 12px;
+        border-radius: 0;
+    }
+
+    .header-menu-wrapper .header-menu .m-dropdown hr {
+        display: none;
+    }
+
+    .header-menu-wrapper .header-menu .m-link.m-dropdown-toggle {
+        display: inline-block !important; 
+        width: auto !important;
+    }
+
+    /* Change the font size for all mobile menu links */
+    .header-menu-wrapper .header-menu .m-link,
+    .header-menu-wrapper .header-menu .m-dropdown-link {
+        font-size: 18px; /* Adjust this value as needed */
+        color: #000000;
+
+    }
 }
