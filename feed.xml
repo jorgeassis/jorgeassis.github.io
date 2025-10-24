@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.3">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2025-10-24T14:51:32+01:00</updated><id>/feed.xml</id><title type="html">BiodiversityDataScience</title><subtitle>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</subtitle><entry><title type="html">Cold‐Water coral redistribution under climate change</title><link href="/coral-redistribution-under-climate-change-biodiversity/" rel="alternate" type="text/html" title="Cold‐Water coral redistribution under climate change" /><published>2025-06-25T03:30:00+01:00</published><updated>2025-06-25T03:30:00+01:00</updated><id>/P</id><content type="html" xml:base="/coral-redistribution-under-climate-change-biodiversity/"><![CDATA[<p>Cold-water corals (CWCs) are critical ecosystem-structuring species that provide essential services, from continental shelves to abyssal depths. They create complex, three-dimensional habitats, acting as feeding, breeding, and nursery grounds for a wide range of commercially important fish and invertebrates. Their future, however, is heavily dependent on the planet’s climate trajectory.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.3">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2025-10-24T17:07:02+01:00</updated><id>/feed.xml</id><title type="html">BiodiversityDataScience</title><subtitle>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</subtitle><entry><title type="html">Cold‐Water coral redistribution under climate change</title><link href="/coral-redistribution-under-climate-change-biodiversity/" rel="alternate" type="text/html" title="Cold‐Water coral redistribution under climate change" /><published>2025-06-25T03:30:00+01:00</published><updated>2025-06-25T03:30:00+01:00</updated><id>/P</id><content type="html" xml:base="/coral-redistribution-under-climate-change-biodiversity/"><![CDATA[<p>Cold-water corals (CWCs) are critical ecosystem-structuring species that provide essential services, from continental shelves to abyssal depths. They create complex, three-dimensional habitats, acting as feeding, breeding, and nursery grounds for a wide range of commercially important fish and invertebrates. Their future, however, is heavily dependent on the planet’s climate trajectory.</p>
 
 <h5>The critical knowledge gap</h5>
 
@@ -22,11 +22,23 @@
 
 <h5>The main finding</h5>
 
+<p>Our results showed major biodiversity hotspots in the Gulf of Mexico and the Caribbean Sea, and delineated ten distinct bioregions, each with varying species richness, depth distribution patterns, and generally low levels of endemicity.</p>
+
+<div class="border-radius-10 margin-top-20" style="background-color: white; padding: 10px; max-width: 900px; margin-bottom: 10px">
+<img src="/assets/images/posts/gcb70563-fig-0002-m.webp" style="max-width: 880px;" />
+</div>
+<p>Fig. Present-day species richness distribution for 741 species of cold-water corals.</p>
+
 <p>While the global extent of suitable CWC habitat is projected to persist, species-level redistributions will drive dramatic change, with the magnitude strongly tied to emission levels. We identified the Gulf of Mexico and the Caribbean Sea as major present-day biodiversity hotspots. Under the high-emission scenario (SSP3-7.0), we projected:</p>
 
 <p><i class="fas fa-angle-double-right"></i> Widespread poleward and depth shifts, with average species distribution projected to deepen by 26.0m.<br />
 <i class="fas fa-angle-double-right"></i> Significant biodiversity loss in shallow and low-latitude regions, with the Central Western Atlantic projected to lose up to 66 species.<br />
 <i class="fas fa-angle-double-right"></i> Richness gains primarily concentrated in deeper offshore areas and the Arctic, indicating potential but fragile new habitats.</p>
+
+<div class="border-radius-10 margin-top-20" style="background-color: white; padding: 10px; max-width: 900px; margin-bottom: 10px">
+<img src="/assets/images/posts/gcb70563-fig-0004-m.webp" style="max-width: 880px;" />
+</div>
+<p>Fig. Projected end-of-century changes under SSP1-1.9 and SSP3-7.0 in (a, b) species richness, (c, d) climate refugia, and (e, f) community turnover of cold-water corals. Climate refugia represent the fraction of species predicted to retain suitable habitat (0 = none persist; 1 = all persist). Turnover ranges from 0 (no change in species composition) to 1 (complete replacement). Areas with no species present are shown in white.</p>
 
 <h5>Main implications for conservation and management of biodiversity</h5>
 
