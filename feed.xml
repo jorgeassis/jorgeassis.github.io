@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.3">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2025-10-26T10:35:10+00:00</updated><id>/feed.xml</id><title type="html">BiodiversityDataScience</title><subtitle>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</subtitle><entry><title type="html">Cold‐Water coral redistribution under climate change</title><link href="/coral-redistribution-under-climate-change-biodiversity/" rel="alternate" type="text/html" title="Cold‐Water coral redistribution under climate change" /><published>2025-06-25T03:30:00+01:00</published><updated>2025-06-25T03:30:00+01:00</updated><id>/P</id><content type="html" xml:base="/coral-redistribution-under-climate-change-biodiversity/"><![CDATA[<div style="margin-bottom: 30px">
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.3">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2025-10-28T19:37:38+00:00</updated><id>/feed.xml</id><title type="html">BiodiversityDataScience</title><subtitle>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</subtitle><entry><title type="html">Cold‐Water coral redistribution under climate change</title><link href="/coral-redistribution-under-climate-change-biodiversity/" rel="alternate" type="text/html" title="Cold‐Water coral redistribution under climate change" /><published>2025-06-25T03:30:00+01:00</published><updated>2025-06-25T03:30:00+01:00</updated><id>/P</id><content type="html" xml:base="/coral-redistribution-under-climate-change-biodiversity/"><![CDATA[<div style="margin-bottom: 30px">
     <iframe title="" allowtransparency="true" class="border-radius-10" height="150" width="100%" style="border: 2px solid #7e4abeff;min-width: min(100%, 430px);height:150px;" scrolling="no" data-name="pb-iframe-player" src="https://www.podbean.com/player-v2/?from=embed&amp;i=j2bm5-19a2734-pb&amp;share=0&amp;download=0&amp;fonts=Arial&amp;skin=f6f6f6&amp;font-color=000000&amp;rtl=0&amp;logo_link=episode_page&amp;btn-skin=F6B1BB&amp;size=150" loading="lazy"></iframe>
 </div>
 
@@ -28,8 +28,8 @@
 
 <p>Our results showed major biodiversity hotspots in the Gulf of Mexico and the Caribbean Sea, and delineated ten distinct bioregions, each with varying species richness, depth distribution patterns, and generally low levels of endemicity.</p>
 
-<div class="border-radius-10 margin-top-20" style="background-color: white; padding: 10px; max-width: 900px; margin-bottom: 10px">
-<img src="/assets/images/posts/gcb70563-fig-0002-m.webp" style="max-width: 880px;" />
+<div class="border-radius-10 margin-top-20" style="background-color: white; padding: 10px; margin-bottom: 10px">
+<img src="/assets/images/posts/gcb70563-fig-0002-m.webp" />
 </div>
 <p>Fig. Present-day species richness distribution for 741 species of cold-water corals.</p>
 
@@ -39,8 +39,8 @@
 <i class="fas fa-angle-double-right"></i> Significant biodiversity loss in shallow and low-latitude regions, with the Central Western Atlantic projected to lose up to 66 species.<br />
 <i class="fas fa-angle-double-right"></i> Richness gains primarily concentrated in deeper offshore areas and the Arctic, indicating potential but fragile new habitats.</p>
 
-<div class="border-radius-10 margin-top-20" style="background-color: white; padding: 10px; max-width: 900px; margin-bottom: 10px">
-<img src="/assets/images/posts/gcb70563-fig-0004-m.webp" style="max-width: 880px;" />
+<div class="border-radius-10 margin-top-20" style="background-color: white; padding: 10px; margin-bottom: 10px">
+<img src="/assets/images/posts/gcb70563-fig-0004-m.webp" />
 </div>
 <p>Fig. Projected end-of-century changes under SSP1-1.9 and SSP3-7.0 in (a, b) species richness, (c, d) climate refugia, and (e, f) community turnover of cold-water corals. Climate refugia represent the fraction of species predicted to retain suitable habitat (0 = none persist; 1 = all persist). Turnover ranges from 0 (no change in species composition) to 1 (complete replacement). Areas with no species present are shown in white.</p>
 
@@ -88,7 +88,14 @@
 <p>The core challenge was translating vast, continuous streams of global maritime traffic (AIS data) and highly dynamic species distribution models (AquaMaps and BirdLife) into a single, actionable risk assessment framework. We used a bivariate mapping approach in R to synthesize these complex datasets, enabling us to quantify the interplay between biodiversity value and potential impact risk across every marine grid cell, making the findings globally consistent and scalable.</p>
 
 <h5>Main finding</h5>
-<p>Our maps reveal that biodiversity is concentrated in two major zones. PPAs—our ocean’s last large, undisturbed refuges—are predominantly found in the remote, high southern latitudes, near Antarctica. Conversely, PMAs are clustered along coastlines and in critical trans-oceanic passages, especially in the mid-Pacific, southern Indian Ocean, and South Atlantic. Crucially, we found that existing Marine Protected Areas (MPAs) are currently falling short: they cover only 15.2% of PPAs and 16.2% of PMAs, leaving vast priority areas unprotected or unmanaged.</p>
+<p>Our maps reveal that biodiversity is concentrated in two major zones. PPAs—our ocean’s last large, undisturbed refuges—are predominantly found in the remote, high southern latitudes, near Antarctica. Conversely, PMAs are clustered along coastlines and in critical trans-oceanic passages, especially in the mid-Pacific, southern Indian Ocean, and South Atlantic.</p>
+
+<div class="border-radius-10 margin-top-20" style="background-color: white; padding: 10px; margin-bottom: 10px">
+<img src="/assets/images/posts/1-s2.0-S0006320725004689-gr1_lrg.jpg" />
+</div>
+<p>Fig. Distribution of shipless areas (blue), representing regions with minimal or negligible vessel activity. Marine Protected Areas (&gt;100,000 ha) are overlaid in green, while Exclusive Economic Zone boundaries are marked with dotted lines.</p>
+
+<p>Crucially, we found that existing Marine Protected Areas (MPAs) are currently falling short: they cover only 15.2% of PPAs and 16.2% of PMAs, leaving vast priority areas unprotected or unmanaged.</p>
 
 <h5>Main implications for conservation and management of biodiversity</h5>
 <p>These findings provide a clear roadmap for achieving global marine conservation goals, including the UN 2030 Agenda for Sustainable Development and the $30 \times 30$ target. We need a dual-strategy approach to marine spatial planning:</p>
