@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.3">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2025-11-05T11:54:00+00:00</updated><id>/feed.xml</id><title type="html">BiodiversityDataScience</title><subtitle>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</subtitle><entry><title type="html">Cold‐Water coral redistribution under climate change</title><link href="/coral-redistribution-under-climate-change-biodiversity/" rel="alternate" type="text/html" title="Cold‐Water coral redistribution under climate change" /><published>2025-06-25T03:30:00+01:00</published><updated>2025-06-25T03:30:00+01:00</updated><id>/P</id><content type="html" xml:base="/coral-redistribution-under-climate-change-biodiversity/"><![CDATA[<div style="margin-bottom: 30px">
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.3">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2025-11-05T11:56:30+00:00</updated><id>/feed.xml</id><title type="html">BiodiversityDataScience</title><subtitle>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</subtitle><entry><title type="html">Cold‐Water coral redistribution under climate change</title><link href="/coral-redistribution-under-climate-change-biodiversity/" rel="alternate" type="text/html" title="Cold‐Water coral redistribution under climate change" /><published>2025-06-25T03:30:00+01:00</published><updated>2025-06-25T03:30:00+01:00</updated><id>/P</id><content type="html" xml:base="/coral-redistribution-under-climate-change-biodiversity/"><![CDATA[<div style="margin-bottom: 30px">
     <iframe title="" allowtransparency="true" class="border-radius-10" height="150" width="100%" style="border: 2px solid #7e4abeff;min-width: min(100%, 430px);height:150px;" scrolling="no" data-name="pb-iframe-player" src="https://www.podbean.com/player-v2/?from=embed&amp;i=j2bm5-19a2734-pb&amp;share=0&amp;download=0&amp;fonts=Arial&amp;skin=f6f6f6&amp;font-color=000000&amp;rtl=0&amp;logo_link=episode_page&amp;btn-skin=F6B1BB&amp;size=150" loading="lazy"></iframe>
 </div>
 
@@ -54,14 +54,14 @@
 
 <h5>Knowledge gap</h5>
 <p>Global marine conservation efforts are severely hampered by a pervasive lack of current, consistent data and chronic underfunding. Monitoring biodiversity in remote, complex ecosystems like coral reefs is traditionally expensive, requiring specialized equipment and expert taxonomic knowledge. This results in:
-<br />
+<br /><br />
 <i class="fas fa-angle-double-right"></i> Massive Data Deficiencies: Less than 6% of described species have been assessed for extinction risk by the IUCN, and up to 17,000 of those are “data deficient.” This gap is most pronounced in marine ecosystems.
 <br />
 <i class="fas fa-angle-double-right"></i> Slow Data Processing: Citizen Science programs, like the invaluable Reef Life Survey (RLS), are generating high-quality image data much faster than expert taxonomists can label them. This creates a bottleneck that limits the real-world impact of citizen efforts.</p>
 
 <h5>Main approach</h5>
 <p>We hypothesized that Multimodal Large Language Models (MLLMs)—the cutting-edge AI architecture that can process both image and text data—could effectively leverage vast Citizen Science datasets to automate the laborious task of benthic image classification. Our approach specifically focused on:
-<br />
+<br /><br />
 <i class="fas fa-angle-double-right"></i> Leveraging Citizen Science Data: Using tens of thousands of seabed images and their multi-label annotations from the Reef Life Survey (RLS) project.
 <br />
 <i class="fas fa-angle-double-right"></i> Multimodal AI: Utilizing the Qwen-2.5-VL MLLM family, which are capable of interpreting images of the seafloor and the associated labels simultaneously.
@@ -70,21 +70,21 @@
 
 <h5>Technological challenge - how we tackle the study</h5>
 <p>The research was a rigorous exploration of optimizing MLLMs for this specific task. We addressed two main technological challenges:
-<br />
+<br /><br />
 <i class="fas fa-angle-double-right"></i> Optimizing Untrained Model Performance (Prompt Engineering): before fine-tuning, we tested various prompt engineering techniques—the art of giving the AI better instructions—to get the best possible results from the general-purpose model.
 <br />
 <i class="fas fa-angle-double-right"></i> Achieving Domain Expertise (Fine-Tuning): we employed QLoRA to efficiently adapt the MLLMs to the RLS dataset. Our experiments compared different model sizes (3B vs. 7B parameters) and the effect of adding contextual data (like geographic co-ordinates) during training.</p>
 
 <h5>Main finding</h5>
 <p>The top-performing model—the 7B parameter MLLM fine-tuned on the largest dataset—achieved an average F1-score of 0.45. This score is directly comparable to previous high-performing, task-specific Convolutional Neural Network (CNN) models that have been integrated into professional marine monitoring workflows, such as those used by NOAA. Key Takeaways from the Final Model:
-<br />
+<br /><br />
 <i class="fas fa-angle-double-right"></i> High-Frequency Labels: The model excelled at identifying common, well-represented classes like Ecklonia radiata (a type of kelp), achieving an F1-score of 0.706.
 <br />
 <i class="fas fa-angle-double-right"></i> Imbalanced Data Challenge: The model struggled with rare species (low-frequency classes), which is a common limitation when dealing with real-world, highly imbalanced biodiversity datasets.</p>
 
 <h5>Main implications</h5>
 <p>This research validates Multimodal Large Language Models as a robust, scalable, and powerful alternative to traditional Computer Vision models (like CNNs) for ecological classification. The combined approach of Citizen Science and MLLMs offers a clear path to:
-<br />
+<br /><br />
 <i class="fas fa-angle-double-right"></i> Unlock the RLS Data Archive: Significantly accelerate the labeling of the vast, high-quality RLS photo archives, turning raw data into actionable biodiversity insights faster than ever before.
 <br />
 <i class="fas fa-angle-double-right"></i> Scale Global Monitoring: Create a foundation for global, cost-effective monitoring programs that can leverage publicly submitted imagery for real-time assessment of coral reef health.
