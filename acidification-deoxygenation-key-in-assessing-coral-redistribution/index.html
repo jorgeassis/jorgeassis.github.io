@@ -9,18 +9,18 @@
 		<!-- SEO -->
 
 		
-			<title>Biodiversity Data Science | Vulnerability of species to low oxygen under climate change</title>
-			<meta property="og:title" content="Biodiversity Data Science | Vulnerability of species to low oxygen under climate change" />
-			<meta property="og:site_name" content="Biodiversity Data Science | Vulnerability of species to low oxygen under climate change" />
-			<meta property="twitter:title" content="Biodiversity Data Science | Vulnerability of species to low oxygen under climate change" />
+			<title>Biodiversity Data Science | Acidification and deoxygenation are key coral redistribution drivers</title>
+			<meta property="og:title" content="Biodiversity Data Science | Acidification and deoxygenation are key coral redistribution drivers" />
+			<meta property="og:site_name" content="Biodiversity Data Science | Acidification and deoxygenation are key coral redistribution drivers" />
+			<meta property="twitter:title" content="Biodiversity Data Science | Acidification and deoxygenation are key coral redistribution drivers" />
 
 		
 
 		
 
-			<meta name="description" content="Tolerance to low oxygen conditions is greater in smaller than larger, and less mobile than mobile taxa. The most vulnerable taxa are large active fish, and the least include mussels, hydrozoans, and jellyfishes.">
-			<meta property="og:description" content="Tolerance to low oxygen conditions is greater in smaller than larger, and less mobile than mobile taxa. The most vulnerable taxa are large active fish, and the least include mussels, hydrozoans, and jellyfishes." />
-			<meta name="twitter:card" content="Tolerance to low oxygen conditions is greater in smaller than larger, and less mobile than mobile taxa. The most vulnerable taxa are large active fish, and the least include mussels, hydrozoans, and jellyfishes." />
+			<meta name="description" content="Incorporating pH and dissolved oxygen into species distribution models reveals up to 21.4% greater range contractions for cold-water corals under climate change">
+			<meta property="og:description" content="Incorporating pH and dissolved oxygen into species distribution models reveals up to 21.4% greater range contractions for cold-water corals under climate change" />
+			<meta name="twitter:card" content="Incorporating pH and dissolved oxygen into species distribution models reveals up to 21.4% greater range contractions for cold-water corals under climate change" />
 
 		
 
@@ -131,10 +131,10 @@
 		<div class="row margin-top-40">
 			<div class="col-10 col-lg-10 col-xl-10 offset-lg-1 text-left">
 
-        <h3>Vulnerability of species to low oxygen under climate change</h3>
+        <h3>Acidification and deoxygenation are key coral redistribution drivers</h3>
 
         <div class="margin-top-10">
-          <p class="font-family-secondary text-dark">Tolerance to low oxygen conditions is greater in smaller than larger, and less mobile than mobile taxa. The most vulnerable taxa are large active fish, and the least include mussels, hydrozoans, and jellyfishes.</p>
+          <p class="font-family-secondary text-dark">Incorporating pH and dissolved oxygen into species distribution models reveals up to 21.4% greater range contractions for cold-water corals under climate change</p>
         </div>
 
         <div class="margin-bottom-10">
@@ -157,11 +157,7 @@
 			    
           
           
-			  	<a href="/tag/biodiversity"><span style="margin-right: 7px" class="button button-xs button-font-2 button-yellow button-radius mt-4">biodiversity</span></a>
-			    
-          
-          
-			  	<a href="/tag/paris-agreement"><span style="margin-right: 7px" class="button button-xs button-font-2 button-yellow button-radius mt-4">paris agreement</span></a>
+			  	<a href="/tag/machine-learning"><span style="margin-right: 7px" class="button button-xs button-font-2 button-yellow button-radius mt-4">machine learning</span></a>
 			    
           
 
@@ -173,18 +169,18 @@
 		<div class="row" style="margin-top: 30px">
 			<div class="col-12 col-lg-10 offset-lg-1">
 
-          <div class="bg-image box-shadow border-radius-05 margin-bottom-10" data-bg-src="/assets/images/posts/dorothea-oldani-unsplash.webp" style="height: 425px; background-position: center"></div>
+          <div class="bg-image box-shadow border-radius-05 margin-bottom-10" data-bg-src="/assets/images/posts/2_1.webp" style="height: 425px; background-position: center"></div>
 
           <div class="margin-top-20">
 
             
-            <p class="font-small">Picture credits: Dorothea Oldani on unsplash</p>
+            <p class="font-small">Picture credits: Sylvain Cleymans on unsplash</p>
             
 
             
 
             
-            	<a target="_blank" class="button button-sm button-font-2 button-purple button-radius mt-4" href="https://doi.org/10.1016/B978-0-12-821139-7.00203-8">Access publication</a>
+            	<a target="_blank" class="button button-sm button-font-2 button-purple button-radius mt-4" href="https://doi.org/10.1002/lno.70351">Access publication</a>
             
 
           </div>
@@ -195,9 +191,24 @@
       <div class="row" style="margin-top: 25px">
 			  <div class="col-12 col-lg-10 offset-lg-1 post-content text-justify">
           
-          <p>In recent decades, the ocean is becoming less oxygenated due to the combined effect of global warming and the spread of coastal eutrophication, with extensive consequences to marine ecosystems. Past mass extinctions were at least in part due to anoxic conditions in the oceans. Thus, we should be concerned about ongoing and projected declining availability of well-oxygenated habitats in the oceans.</p>
+          <p>The ocean is undergoing significant physical and chemical changes, posing massive challenges to marine biodiversity. But are our AI and machine learning models truly capturing the full scope of this threat?</p>
 
-<p>We show that tolerance to <b>low oxygen is greater in smaller than larger, and less mobile than mobile taxa</b>. The most vulnerable taxa to low oxygen are large active fish, and the least include mussels, hydrozoans, and jellyfishes. <b>Climate change is thus likely to causes shifts in the relative abundance of species due to oxygen constraints</b>.</p>
+<h5>Knowledge gap</h5>
+<p>While ocean warming is widely recognized, climate change is also profoundly altering ocean chemistry through acidification and deoxygenation. However, our literature review found that nearly 80% of studies predicting marine species redistributions completely overlook pH and dissolved oxygen levels, relying almost exclusively on temperature. This widespread omission potentially fails to adequately capture the true drivers of marine species’ redistributions.</p>
+
+<h5>Main approach</h5>
+<p>To address this, we conducted a global comparative analysis focusing on 268 cold-water coral species. We utilized machine learning maximum entropy models (MaxEnt) to project potential future distributions across different shared socioeconomic pathways and dispersal scenarios. We then directly compared the outcomes of models developed with a full suite of marine predictors against those that excluded pH and oxygen.</p>
+
+<h5>Technological challenge - how we tackle the study</h5>
+<p>Comparing models with different numbers of predictors is technically challenging, as adding variables can artificially inflate apparent model performance. We tackled this by employing an information criterion approach (AICc), which measures goodness-of-fit while strictly penalizing unnecessary model complexity. Additionally, we applied spatial block cross-validation to assess how well the models perform on withheld data and transfer to novel, non-analog future environmental conditions.</p>
+
+<h5>Main finding</h5>
+<p>Our results demonstrate that, irrespective of the specific scenario, timeframe, or dispersal assumption, models incorporating pH and dissolved oxygen consistently projected an 11.5% to 21.4% higher impact from climate change. For example, under a high-emission scenario by the end of the century, these comprehensive models projected an average geographic range contraction of 48.2% for cold-water corals, compared to only 26.8% in models lacking those two variables.</p>
+
+<h5>Main implications</h5>
+<p><i class="fas fa-angle-double-right"></i> Relying solely on temperature predictors risks severely underestimating extinction risks and misrepresenting future habitat shifts.
+<i class="fas fa-angle-double-right"></i> Future biodiversity forecasts must systematically integrate a broader suite of ecologically meaningful variables to accurately identify climate refugia.
+<i class="fas fa-angle-double-right"></i> Improving these predictive tools is vital for informing conservation planning, prioritizing management interventions, and designing resilient marine protected areas to support global sustainable development goals.</p>
 
 
         </div>
@@ -209,10 +220,10 @@
           <div style="padding: 30px; padding-bottom: 15px;" class="col-12 col-lg-10 offset-lg-1 border-radius-10 bg-light-purple">
             
               <h3>Main reference</h3>
-              <p>Shi, Z., Assis, J., and Costello, M.J. (2021). Vulnerability of Marine Species to Low Oxygen Under Climate Change in Elsevier.</p>
+              <p>Liu, S., Xiao, B., Bede‐Fazekas, Á., Mammola, S., García Molinos, J., Kass, J. M., Assis, J., Lin, C., Qu, J., Huang, H., Lin, Q., & Zhang, Z. (2026). Acidification and deoxygenation matter in assessing redistribution of global cold‐water coral biodiversity induced by climate change. Limnology and Oceanography, 71(3)</p>
 
             
-            <a class="button button-xs button-font-2 button-purple button-radius margin-top-20" target="_blank" href="https://doi.org/10.1016/B978-0-12-821139-7.00203-8">Access publication</a>
+            <a class="button button-xs button-font-2 button-purple button-radius margin-top-20" target="_blank" href="https://doi.org/10.1002/lno.70351">Access publication</a>
             
 
             
@@ -252,21 +263,6 @@
          
 
 				<div class="col-12 col-md-4" style="margin-bottom: 50px;">
-          <a href="/acidification-deoxygenation-key-in-assessing-coral-redistribution/">
-
-            <div class="bg-image box-shadow border-radius-05" data-bg-src="/assets/images/posts/2_1.webp" style="height: 250px; background-position: center">
-            </div>
-
-          </a>
-          <div class="mt-3">
-            <h5 class="mt-1"><a href="/acidification-deoxygenation-key-in-assessing-coral-redistribution/">Acidification and deoxygenation are key coral redistribution drivers</a></h5>
-            <p class="mt-2">Incorporating pH and dissolved oxygen into species distribution models reveals up to 21.4% greater range contractions for ...</p>
-          </div>
-        </div>
-
-           
-
-				<div class="col-12 col-md-4" style="margin-bottom: 50px;">
           <a href="/climate-change-effects-marine-aquaculture-sustainable-scenario/">
 
             <div class="bg-image box-shadow border-radius-05" data-bg-src="/assets/images/posts/film-pfmn3-CZIYc-unsplash.jpg" style="height: 250px; background-position: center">
@@ -291,6 +287,21 @@
           <div class="mt-3">
             <h5 class="mt-1"><a href="/coral-redistribution-under-climate-change-biodiversity/">Cold‐Water coral redistribution under climate change</a></h5>
             <p class="mt-2">Climate change will force cold-water corals to shift poleward and deeper, causing significant biodiversity loss in shallow...</p>
+          </div>
+        </div>
+
+           
+
+				<div class="col-12 col-md-4" style="margin-bottom: 50px;">
+          <a href="/climate-change-threaten-european-seahorses-conservation/">
+
+            <div class="bg-image box-shadow border-radius-05" data-bg-src="/assets/images/posts/brendan-beale-pJ8IFKFtERc-unsplash.jpg" style="height: 250px; background-position: center">
+            </div>
+
+          </a>
+          <div class="mt-3">
+            <h5 class="mt-1"><a href="/climate-change-threaten-european-seahorses-conservation/">Projected climate change threatens European Seahorses</a></h5>
+            <p class="mt-2">Data science models show limited dispersal severely restricts seahorse adaptation to climate change, leading to major habi...</p>
           </div>
         </div>
 
